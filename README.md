@@ -1,9 +1,11 @@
-# jittor-Labmem-Landscape
+# jittor 风格及语义引导的风景图片生成
           
 ## 简介
-本项目包含了第三届计图人工智能挑战赛 - 赛题一：风格及语义引导的风景图片生成的代码实现。使用jittor框架在风景图片数据集上训练模型，根据输入的mask和ref图，生成对应的gen图。
+本项目包含了第三届计图人工智能挑战赛 - 赛题一：风格及语义引导的风景图片生成的代码实现。
 
-我们开源了效果最好的版本，即 `GAUGAN + SESAME`
+项目使用jittor框架在风景图片数据集上训练模型，根据输入的mask和ref图，生成对应的gen图。gen图需要考虑mask图的语义分割信息，以及ref图的（色调等）风格信息。
+
+
 
 ## 队伍成员及分工
 
@@ -19,7 +21,7 @@
 
 
 ## 算法背景
-团队复现了多种算法及其变体，我们开源了效果最好的版本，即 `GAUGAN + SESAME`
+我们主要使用 $Jittor$ 实现了 $GAUGAN + ColorLoss$ 、 $GAUGAN + SESAME$ 、 $OASIS$ 、 $DP-GAN$ 的模型结构并成功跑通训练和测试流程。我们开源了效果最好的版本，即 `GAUGAN + SESAME`
 
 ![result](./select/385491480_17acdedabd_b.jpg)
 
