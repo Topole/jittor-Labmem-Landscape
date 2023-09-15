@@ -1,11 +1,19 @@
 # jittor-Labmem-Landscape
 第三届计图人工智能挑战赛。使用jittor框架在风景图片数据集上训练模型，根据输入的mask和ref图，生成对应的gen图。
-
-# jittor 计图挑战热身赛 Conditional GAN
-![result](./select/385491480_17acdedabd_b.jpg)
           
 ## 简介
 本项目包含了第三届计图人工智能挑战赛 - 计图挑战热身赛的代码实现。在数字图片数据集 MNIST 上训练 Conditional GAN 模型，通过输入一个随机向量 z 和额外的类别标签信息 y ，生成特定数字的图像。
+
+## 队伍成员及分工
+
+* 陈柯文：负责算法 `GAUGAN + ColorLoss` 和 `OASIS Variant` 的实现与仓库维护
+* 肖颂霖：负责算法 `DPGAN  Variant` 和 `GAUGAN + SESAME` 的实现与报告撰写
+
+## 实现效果
+![result](./select/385491480_17acdedabd_b.jpg)
+
+## 算法背景
+![result](./select/385491480_17acdedabd_b.jpg)
 
 ## 安装
 
@@ -39,7 +47,7 @@ sh train.sh
 # train.sh
 CUDA_VISIBLE_DEVICES="0" python train.py --input_path {训练数据集路径（即train_resized文件夹所在路径）}
 ```
-## 测试
+## 推理
 
 在单卡上进行测试：
 
