@@ -5,7 +5,7 @@
 
 项目使用jittor框架在风景图片数据集上训练模型，根据输入的mask和ref图，生成对应的gen图。gen图需要考虑mask图的语义分割信息，以及ref图的（色调等）风格信息。
 
-
+![img1](./img/background.png)
 
 ## 队伍成员及分工
 
@@ -15,15 +15,16 @@
 ## 实现效果
 我们在测试集上实现的效果如下（左一为风格参考图，左二为语义标签图，其余为各模型生成图像）：
 
-<center>
-<img src="./select/385491480_17acdedabd_b.jpg" />
-</center>
+![img1](./img/qualitive result.png)
 
 
 ## 算法背景
 我们主要使用 $Jittor$ 实现了 $GAUGAN + ColorLoss$ 、 $GAUGAN + SESAME$ 、 $OASIS$ 、 $DP-GAN$ 的模型结构并成功跑通训练和测试流程。我们开源了效果最好的版本，即 `GAUGAN + SESAME`
+`GAUGAN + SESAME`主要框架如下：
+![img1](./img/SESAME Architecture.png)
 
-![result](./select/385491480_17acdedabd_b.jpg)
+`GAUGAN + SESAME`鉴别器部分如下：
+![img1](./img/SESAME Discriminator.png)
 
 ## 安装
 
