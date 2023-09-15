@@ -2,7 +2,7 @@
 第三届计图人工智能挑战赛。使用jittor框架在风景图片数据集上训练模型，根据输入的mask和ref图，生成对应的gen图。
 
 # jittor 计图挑战热身赛 Conditional GAN
-![result](./result.png)
+![result](./select/385491480_17acdedabd_b.jpg)
           
 ## 简介
 本项目包含了第三届计图人工智能挑战赛 - 计图挑战热身赛的代码实现。在数字图片数据集 MNIST 上训练 Conditional GAN 模型，通过输入一个随机向量 z 和额外的类别标签信息 y ，生成特定数字的图像。
