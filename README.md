@@ -22,9 +22,11 @@
 我们主要使用 $Jittor$ 实现了 $GAUGAN + ColorLoss$ 、 $GAUGAN + SESAME$ 、 $OASIS$ 、 $DP-GAN$ 的模型结构并成功跑通训练和测试流程。我们开源了效果最好的版本，即 $GAUGAN + SESAME$
 
 $GAUGAN + SESAME$ 主要框架如下：
+
 ![img3](./img/SESAME_Architecture.png)
 
 $GAUGAN + SESAME$ 鉴别器部分如下：
+
 ![img4](./img/SESAME_Discriminator.png)
 
 ## 安装
