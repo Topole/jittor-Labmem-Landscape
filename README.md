@@ -1,8 +1,7 @@
 # jittor-Labmem-Landscape
-第三届计图人工智能挑战赛。使用jittor框架在风景图片数据集上训练模型，根据输入的mask和ref图，生成对应的gen图。
           
 ## 简介
-本项目包含了第三届计图人工智能挑战赛 - 计图挑战热身赛的代码实现。在数字图片数据集 MNIST 上训练 Conditional GAN 模型，通过输入一个随机向量 z 和额外的类别标签信息 y ，生成特定数字的图像。
+本项目包含了第三届计图人工智能挑战赛 - 赛题一：风格及语义引导的风景图片生成的代码实现。使用jittor框架在风景图片数据集上训练模型，根据输入的mask和ref图，生成对应的gen图。
 
 ## 队伍成员及分工
 
@@ -65,4 +64,4 @@ CUDA_VISIBLE_DEVICES="0" python test.py  \
 
 
 ##致谢
-本项目代码参考了jittor官方提供的[GauGAN](https://github.com/Jittor/JGAN/tree/master/models/gaugan)以及[SESAME](www.code.com)。
+本项目代码参考了jittor官方提供的[GauGAN](https://github.com/Jittor/JGAN/tree/master/models/gaugan)以及[SESAME]([www.code.com](https://github.com/entavelis/OpenSESAME)https://github.com/entavelis/OpenSESAME)。
