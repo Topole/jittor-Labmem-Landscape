@@ -52,6 +52,8 @@ pip install -r requirements.txt # 本目录下的requirements.txt
 
 ## 训练
 
+在多卡上进行训练：
+
 ```bash
 sh train.sh
 ```
@@ -65,7 +67,7 @@ CUDA_VISIBLE_DEVICES="0,1,2,3" mpirun -np 4 python -m train.py --input_path {训
 
 ## 推理
 
-在单卡上进行测试：
+在单卡上进行推理：
 
 ```bash 
 sh test.sh
