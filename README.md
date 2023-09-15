@@ -19,11 +19,12 @@
 
 
 ## 算法背景
-我们主要使用 $Jittor$ 实现了 $GAUGAN + ColorLoss$ 、 $GAUGAN + SESAME$ 、 $OASIS$ 、 $DP-GAN$ 的模型结构并成功跑通训练和测试流程。我们开源了效果最好的版本，即 `GAUGAN + SESAME`
-`GAUGAN + SESAME`主要框架如下：
+我们主要使用 $Jittor$ 实现了 $GAUGAN + ColorLoss$ 、 $GAUGAN + SESAME$ 、 $OASIS$ 、 $DP-GAN$ 的模型结构并成功跑通训练和测试流程。我们开源了效果最好的版本，即 $GAUGAN + SESAME$
+
+$GAUGAN + SESAME$ 主要框架如下：
 ![img3](./img/SESAME_Architecture.png)
 
-`GAUGAN + SESAME`鉴别器部分如下：
+$GAUGAN + SESAME$ 鉴别器部分如下：
 ![img4](./img/SESAME_Discriminator.png)
 
 ## 安装
@@ -46,6 +47,7 @@ pip install -r requirements.txt # 本目录下的requirements.txt
 
 预训练模型采用的是 `Jittor` 框架自带的 `vgg19` 模型，无需额外下载，在代码运行的过程中会载入到内存里。
 
+
 ## 训练
 
 ```bash
@@ -56,6 +58,9 @@ sh train.sh
 # train.sh
 CUDA_VISIBLE_DEVICES="0,1,2,3" mpirun -np 4 python -m train.py --input_path {训练数据集路径（即train_resized文件夹所在路径）}
 ```
+
+在4张3090上训练400个epoch大约需要四天
+
 ## 推理
 
 在单卡上进行测试：
@@ -74,6 +79,5 @@ CUDA_VISIBLE_DEVICES="0" python test.py  \
 --which_epoch {使用的模型的epoch数目}
 ```
 
-
-##致谢
+## 致谢
 本项目代码参考了jittor官方提供的[GauGAN](https://github.com/Jittor/JGAN/tree/master/models/gaugan)以及[SESAME](https://github.com/entavelis/OpenSESAME)。
